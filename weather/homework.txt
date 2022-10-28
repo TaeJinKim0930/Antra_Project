@@ -1,0 +1,26 @@
+
+
+service A -> service B
+     application-name/uri..
+
+     discovery service
+        application-name : ip,port, ip port
+
+1. service A -> /application-name -> B
+2. service A -> send rest api request to fetch ip from discovery service
+3. service A gets 2 ip, use [ribbon] to decide the ip address
+4. service A -> send rest api request /ip2/.. -> B
+
+
+
+
+Homework:
+1. merge university service into this microservice
+2. configure gateway -> routes to university service
+3. write endpoint in search service -> fetch data from university service
+4. write endpoint in search service -> fetch all employees from dummy data(retry) + fetch all student info
+5. configure hystrix fail tolerance on /employees in employee service (medium)
+6. provide exception handling in search application
+7. provide log in your implementations
+8. create centralized security service (hard)
+9. create centralized co-relation id / unique id in gateway (medium)
