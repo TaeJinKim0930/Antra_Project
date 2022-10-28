@@ -29,12 +29,12 @@ public class Teacher_Student {
     @JoinColumn(name = "teacher_student_id")
     private Teacher_Student teacher_student;
 
-    @ManyToOne
-    @JoinColumn(name = "s_id")
+    @ManyToOne(optional = false)
+    @JoinColumn(referencedColumnName = "s_id")
     private Student student;
 
     @ManyToOne
-    @JoinColumn(name = "t_id")
+    @JoinColumn(referencedColumnName = "t_id")
     private Teacher teacher;
 
     public Teacher getTeacher() {

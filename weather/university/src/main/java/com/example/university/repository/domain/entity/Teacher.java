@@ -9,6 +9,7 @@ import javax.persistence.*;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
+import java.util.UUID;
 
 @Entity
 @Table(name = "/teacher")
@@ -18,7 +19,7 @@ import java.util.Objects;
 public class Teacher {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private String id;
+    private String t_id;
 
     @Column(name = "age")
     private Integer age;
@@ -32,12 +33,15 @@ public class Teacher {
     @OneToMany(fetch = FetchType.LAZY, mappedBy = "teacher", cascade = CascadeType.ALL)
     private List<Teacher_Student> TeacherForStu = new ArrayList<>();
 
+    // was m-m
+    @OneToMany
+    private List<Teacher_Student> StudentsForTea = new ArrayList<>();
     public String getId() {
-        return id;
+        return t_id;
     }
 
-    public void setId(String id) {
-        this.id = id;
+    public void setId(UUID t_id) {
+        this.t_id = String.valueOf(t_id);
     }
 
     public Integer getAge() {
@@ -80,7 +84,7 @@ public class Teacher {
     @Override
     public String toString() {
         return "Teacher{" +
-                "id ='" + id + '\'' +
+                "id ='" + t_id + '\'' +
                 ", age ='" + age + '\'' +
                 ", first ='" + first + '\'' +
                 ", last ='" + last + '\'' +
@@ -92,11 +96,11 @@ public class Teacher {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Teacher teacher = (Teacher) o;
-        return id == teacher.id;
+        return t_id == teacher.t_id;
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(id);
+        return Objects.hash(t_id);
     }
 }

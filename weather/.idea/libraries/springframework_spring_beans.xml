@@ -1,10 +1,10 @@
 <component name="libraryTable">
   <library name="springframework.spring.beans" type="repository">
-    <properties maven-id="org.springframework:spring-beans:5.3.18" />
+    <properties maven-id="org.springframework:spring-beans:5.1.9.RELEASE" />
     <CLASSES>
-      <root url="jar://$MAVEN_REPOSITORY$/org/springframework/spring-beans/5.3.18/spring-beans-5.3.18.jar!/" />
-      <root url="jar://$MAVEN_REPOSITORY$/org/springframework/spring-core/5.3.18/spring-core-5.3.18.jar!/" />
-      <root url="jar://$MAVEN_REPOSITORY$/org/springframework/spring-jcl/5.3.18/spring-jcl-5.3.18.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/org/springframework/spring-beans/5.1.9.RELEASE/spring-beans-5.1.9.RELEASE.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/org/springframework/spring-core/5.1.9.RELEASE/spring-core-5.1.9.RELEASE.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/org/springframework/spring-jcl/5.1.9.RELEASE/spring-jcl-5.1.9.RELEASE.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES />
